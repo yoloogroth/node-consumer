@@ -4,9 +4,9 @@ const { Kafka } = require('kafkajs')
 
 const kafka = new Kafka({
   clientId: 'my-app',
-  brokers: ['my-kafka-deployment-67c4cc5858-26mhd:9092', 'my-kafka-deployment-67c4cc5858-26mhd.my-kafka-service:9092']
+  brokers: ['my-kafka-deployment-67c4cc5858-26mhd:9092']
 });
-
+                                                       // my-kafka-deployment-67c4cc5858-26mhd
 const producer = kafka.producer()
 
 const app = express();
@@ -19,7 +19,7 @@ const port = 8080;
 //producer.disconnect()
 //
 app.get('/', (req, res, next) => {
-  res.send('kafka api');
+  res.send('kafka api - adsoft');
 });
 
 const run = async (username) => {
