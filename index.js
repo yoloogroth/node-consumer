@@ -4,7 +4,7 @@ const { Kafka } = require('kafkajs')
 
 const kafka = new Kafka({
   clientId: 'my-app',
-  brokers: ['service/my-kafka-service:9092', 'my-kafka-service:9092', 'localhost:9092', 'my-kafka-server:9092']
+  brokers: ['my-kafka-deployment-67c4cc5858-26mhd:9092', 'my-kafka-deployment-67c4cc5858-26mhd.my-kafka-service:9092']
 });
 
 const producer = kafka.producer()
