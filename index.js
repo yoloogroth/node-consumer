@@ -27,7 +27,7 @@ const run = async (username) => {
     await producer.connect()
 //    await producer.send()
     await producer.send({
-      topic: 'demo',
+      topic: 'test',
       messages: [ 
 	{ 
 	  'value': `{"name": "${username}" }` 
