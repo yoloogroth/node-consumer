@@ -4,7 +4,7 @@ const { Kafka } = require('kafkajs')
 
 const kafka = new Kafka({
   clientId: 'my-app',
-  brokers: ['https://my-kafka-service-kafka-adsoftsito.cloud.okteto.net/'],
+  brokers: ['https://my-kafka-service-kafka-adsoftsito.cloud.okteto.net:9092'],
 })
 
 const producer = kafka.producer()
