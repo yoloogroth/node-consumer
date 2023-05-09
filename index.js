@@ -4,9 +4,11 @@ const { Kafka } = require('kafkajs')
 
 const kafka = new Kafka({
   clientId: 'my-app',
-  brokers: ['my-kafka-0.my-kafka-headless.kafka-adsoftsito.svc.cluster.local:9092']
+  brokers: ['localhost:9092',
+	//    'your-kafka-0.my-kafka-headless.kafka-adsoftsito.svc.cluster.local:9092'
+	  ]
 });
-                                                       // my-kafka-deployment-67c4cc5858-26mhd
+
 const producer = kafka.producer()
 
 const app = express();
@@ -14,10 +16,7 @@ app.use(cors());
 app.options('*', cors());
 
 const port = 8080;
-//producer.connect()
 
-//producer.disconnect()
-//
 app.get('/', (req, res, next) => {
   res.send('kafka api - adsoft');
 });
