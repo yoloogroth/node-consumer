@@ -38,7 +38,7 @@ const run = async (username) => {
 
 app.get('/like', (req, res, next) => {
   const username = req.query.name;
-  res.send('like ...' + username);
+  res.send({ 'name' : username } );
   run(username).catch(e => console.error(`[example/producer] ${e.message}`, e))
 
 });
